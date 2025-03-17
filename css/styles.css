@@ -1,0 +1,92 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Шапка */
+.header {
+    background: #336699;
+    color: white;
+    padding: 1rem 0;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Горизонтальное меню */
+.navbar {
+    background: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar__menu a:hover {
+    color: #007BFF;
+}
+
+/* Основной контент */
+.main {
+    padding: 2rem 0;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.about-list, .events-list, .news-list, .contacts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-list li, .events-list li, .news-list li, .contacts-list li {
+    margin-bottom: 0.5rem;
+}
+
+.events-list strong, .news-list strong {
+    color: #336699;
+    font-weight: bold;
+}
+
+/* Футер */
+.footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
