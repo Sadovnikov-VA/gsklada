@@ -1,9 +1,15 @@
 /* Общие стили */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 .container {
@@ -12,15 +18,20 @@ body {
     margin: 0 auto;
 }
 
-.hidden {
-    display: none;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
 }
 
 /* Шапка */
 .header {
-    background: #336699;
-    color: white;
+    background: #fff;
     padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header__content {
@@ -32,61 +43,68 @@ body {
 .header__logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: #0072c6;
 }
 
-/* Горизонтальное меню */
-.navbar {
-    background: white;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar__menu {
+.header__menu ul {
     display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    gap: 1.5rem;
 }
 
-.navbar__menu a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
+.header__menu a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.navbar__menu a:hover {
-    color: #007BFF;
+.header__menu a:hover {
+    color: #0072c6;
 }
 
-/* Основной контент */
-.main {
-    padding: 2rem 0;
+/* Главный баннер */
+.hero {
+    text-align: center;
+    padding: 6rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg') no-repeat center/cover;
+    color: #fff;
 }
 
-.section {
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
-.about-list, .events-list, .news-list, .contacts-list {
-    list-style: none;
-    padding: 0;
+/* Разделы */
+.section {
+    padding: 3rem 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
-.about-list li, .events-list li, .news-list li, .contacts-list li {
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0072c6;
+}
+
+.section p, .section ul {
+    color: #555;
+}
+
+.section ul li {
     margin-bottom: 0.5rem;
-}
-
-.events-list strong, .news-list strong {
-    color: #336699;
-    font-weight: bold;
 }
 
 /* Футер */
 .footer {
-    background: #f4f4f4;
+    background: #0072c6;
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
