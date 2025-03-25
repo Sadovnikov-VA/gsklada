@@ -20,13 +20,14 @@ header {
 
 .navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
     padding-top: 10px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
 }
 
 .nav-button {
@@ -72,17 +73,18 @@ header {
 }
 
 .announcements {
-    background: linear-gradient(135deg, #FFDD57, #FFA500);
+    background: linear-gradient(135deg, #F8E08E, #E6A843);
     color: #2C3E50;
-    border: 2px solid #FFA500;
+    border: 2px solid #E6A843;
     border-radius: 12px;
     padding: 25px;
     margin: 20px 0;
-    box-shadow: 5px 5px 15px rgba(255, 165, 0, 0.3);
+    box-shadow: 5px 5px 15px rgba(230, 168, 67, 0.3);
     text-align: left;
     position: relative;
     transition: all 0.3s ease;
 }
+
 
 .announcements::before {
     content: "⚠ Важно";
@@ -165,6 +167,7 @@ li {
         width: 100%;
     }
 }
+
 .footer {
     background: #2C3E50;
     color: white;
