@@ -1,181 +1,175 @@
-/* Общие стили */
-* {
+body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #F4F4F4;
+    color: #2C3E50;
+    text-align: center;
 }
 
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+header {
+    background-color: #fff;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 3px solid #2C3E50;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-button {
+    flex-grow: 1;
+    text-align: center;
+    padding: 12px 24px;
+    border: 2px solid #2C3E50;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background: #1A252F;
+    transform: scale(1.05);
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.news, .events, .contacts {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.news:hover, .events:hover, .contacts:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.announcements {
+    background: linear-gradient(135deg, #FFDD57, #FFA500);
+    color: #2C3E50;
+    border: 2px solid #FFA500;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(255, 165, 0, 0.3);
+    text-align: left;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.announcements::before {
+    content: "⚠ Важно";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: #FF4500;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.announcements:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(255, 140, 0, 0.5);
+}
+
+h2 {
+    color: #2C3E50;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Шапка */
-.header {
-    background: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+li {
+    margin: 8px 0;
 }
 
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.news:not(:last-child), .announcements:not(:last-child), .events:not(:last-child) {
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.header__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0072c6;
-}
-
-.header__menu ul {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.header__menu a {
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.header__menu a:hover {
-    color: #0072c6;
-}
-
-/* Главный баннер */
-.hero {
-    text-align: center;
-    padding: 6rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg') no-repeat center/cover;
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007BFF;
     color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+#backToTop:hover {
+    background: #0056b3;
+    transform: scale(1.1);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+    header {
+        font-size: 24px;
+        padding: 15px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+    }
+    .nav-button {
+        width: 100%;
+    }
 }
-
-/* Разделы */
-.section {
-    padding: 3rem 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #0072c6;
-}
-
-.section p, .section ul {
-    color: #555;
-}
-
-.section ul li {
-    margin-bottom: 0.5rem;
-}
-
-/* Объявления */
-#announcements .announcement {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
-
-#announcements .announcement p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Карты */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #0072c6;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Футер */
 .footer {
-    background: #0072c6;
-    color: #fff;
+    background: #2C3E50;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
-}
-
-/* Медиазапросы */
-@media (max-width: 768px) {
-    .header__content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .header__menu ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
+    padding: 15px 10px;
+    margin-top: 30px;
+    font-size: 14px;
 }
